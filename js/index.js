@@ -25,26 +25,11 @@ hideDest.addEventListener('click', event => {
 })
 
 
-// 3. versuch
-/* const listEntries = document.querySelectorAll('li');
-
-listEntries.forEach((li) => {
-    li.addEventListener('click', (event) => {
-        selectedCity.removeAttribute('hidden');
-        selectedCity.innerText = `You selected ${event.target.innerText}`;
-
-        listEntries.forEach((entry) => entry.classList.remove('active'));
-        li.classList.toggle('active');
-    });
-}); */
-
-
-// 4. versuch
 listElement.addEventListener('click', (event) => {
     selectedCity.removeAttribute('hidden');
     selectedCity.innerText = `You selected ${event.target.innerText}`;
     
-    // warum wird erst removed und dann hinzugefügt?
+    
     entries.forEach((entry) => entry.classList.remove('active'));
     event.target.classList.toggle('active'); 
 });
